@@ -3,17 +3,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="/assets/images/pride-avatar.jpg" type="image/x-icon">
-    <title>MWG RGB Generator</title>
+    <title>RGB Generator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="twitter:title" content="RGB Generator">
-    <meta name="twitter:description" content="MWG RGB Gradient Generator. Useful for using the /nick command for changing RGB nicknames.">
-    <meta name="description" content="RGB Gradient Generator. Useful for using the /nick command for changing RGB nicknames.">
+    <meta name="twitter:description" content="RGB Generator là trang hỗ trợ chỉnh sửa văn bản thành màu, bạn có thể tùy chỉnh màu mình thích.">
+    <meta name="description" content="RGB Generator là trang hỗ trợ chỉnh sửa văn bản thành màu, bạn có thể tùy chỉnh màu mình thích.">
   </head>
 
   <body id="bg" class="container" style="font-family: Quicksand;">
 
-    <div id="header">
+    <div id="header" class="text-center">
       <h1 id="title">RGB Generator</h1>
-      <p id="graylabel1" class="gray" style="padding-bottom: 10px;">MWG RGB Gradient Generator. Useful for using the /nick command for changing RGB nicknames.</p>
+      <p id="graylabel1" class="gray" style="padding-bottom: 10px;">RGB Generator là trang hỗ trợ chỉnh sửa văn bản thành màu, bạn có thể tùy chỉnh màu mình thích.</p>
     </div>
 
     <div id="input" class="col-md-2" style="padding-left: 0;">
@@ -26,7 +28,7 @@
       <label id="label4" for="color4" style="display: none;">Fourth Hex Color</label>
       <input style="border-radius: 10px; position: inherit; display: none;" class="form-control col-md-1" id="color4" name="color4" value="FFFFFF" data-jscolor="{preset:'small dark', position:'right'}" oninput="updateSpitter(event)" onchange="updateSpitter(event)">
       <label id="label5" for="steps">Message</label>
-      <input style="border-radius: 10px; position: inherit;" class="form-control col-md-2" id="nickname" name="nickname" type="text" placeholder="Message" value="MythicWolf" oninput="updateSpitter(event);" onchange="updateSpitter(event)">
+      <input style="border-radius: 10px; position: inherit;" class="form-control col-md-2" id="nickname" name="nickname" type="text" placeholder="Message" value="Chào Mừng Bạn Đã Đến Với RGB Generator!" oninput="updateSpitter(event);" onchange="updateSpitter(event)">
       <div id="options">
         <div id="typeslist">
           <label style="margin-bottom: 0px; margin-top: 15px;">Type</label>
@@ -47,41 +49,47 @@
         </div>
         <div id="bald">
           <input type="checkbox" id="bold" onclick="updateSpitter(event);">
-          <label for="bold" style="margin-bottom: 0px;margin-top: 15px;"> Bold output</label>
+          <label for="bold" style="margin-bottom: 0px;margin-top: 15px;"> In Đậm</label>
         </div>
         <div id="italy">
           <input type="checkbox" id="italics" onclick="updateSpitter(event);">
-          <label for="italics" style="margin-bottom: 0px;margin-top: 0px;"> Italic output</label>
+          <label for="italics" style="margin-bottom: 0px;margin-top: 0px;"> In Nghiên</label>
         </div>
         <div id="line">
           <input type="checkbox" id="underline" onclick="updateSpitter(event);">
-          <label for="underline" style="margin-bottom: 0px;margin-top: 0px;"> Underlined output</label>
+          <label for="underline" style="margin-bottom: 0px;margin-top: 0px;"> Gạch Chân</label>
         </div>
         <div id="lineon">
           <input type="checkbox" id="strike" onclick="updateSpitter(event);">
-          <label for="strike" style="margin-bottom: 0px;margin-top: 0px;"> Striked output</label>
+          <label for="strike" style="margin-bottom: 0px;margin-top: 0px;"> Gạch Ngang</label>
         </div>
         <div id="appearance">
           <input type="checkbox" id="darkmode" onclick="darkMode();">
-          <label for="darkmode" style="margin-bottom: 0px;margin-top: 0px;"> Dark Mode</label>
+          <label for="darkmode" style="margin-bottom: 0px;margin-top: 0px;"> Chế Độ Tối</label>
         </div>
       </div>
     </div>
+    <br>
     <div id="output">
-      <label id="label4" for="spitter">Output</label>
-      <label id="graylabel2" class="gray" for="spitter" style="font-weight: normal;">Copy-paste this for RGB text!</label>
+      <label id="label4" for="spitter">Mã Code</label>
+      <label id="graylabel2" class="gray" for="spitter" style="font-weight: normal;"></label>
       <pre id="spitter" class="pp" style="border-radius: 10px; white-space: pre-wrap; height: 95px; margin-right: 15px; font-family: MinecraftRegular;" onclick="copyTextToClipboard(document.getElementById('spitter').textContent);"></pre>
-      <p id="error" style="display: none; margin-bottom: 10px;">This is more than 256 characters and may not fit in the chat box. You may ignore this if you're using a server console.</p>
+      <p id="error" style="color: #f54254; display: none; margin-bottom: 10px;">*Chú ý: Đây là hơn 256 ký tự và có thể không vừa với hộp trò chuyện.  Bạn có thể bỏ qua điều này nếu bạn đang sử dụng Console!</p>
+    </div><br>
+    <div id="coloredNick" class="minecraft" style="word-wrap: break-word;">
+    <label id="label4" for="spitter">Kết Quả</label>
     </div>
-
-    <div id="coloredNick" class="minecraft" style="word-wrap: break-word;"></div>
 
     <script src="script.js"></script>
     <script src="jscolor.js"></script>
   </body>
 
-  <footer>
-    <p><a href="https://google.com">RGB Fork</a></p>
-  </footer>
+    <footer>
+    <div class="copyright mt-5">
+    <div class="container">
+    <p class="p-small">Copyright © 2021 Vuon Vuon Co - All rights reserved.<u> <br> <a href="https://vvc-bot.is-a.dev" target="_blank">H u y#0101 </a></p>
+    </div>
+    </div> 
+    </footer>
 
 </html>
