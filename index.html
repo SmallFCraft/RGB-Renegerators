@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="/assets/images/pride-avatar.jpg" type="image/x-icon">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <title>RGB Generator</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,14 +11,21 @@
     <meta name="twitter:description" content="RGB Generator là trang hỗ trợ chỉnh sửa văn bản thành màu, bạn có thể tùy chỉnh màu mình thích.">
     <meta name="description" content="RGB Generator là trang hỗ trợ chỉnh sửa văn bản thành màu, bạn có thể tùy chỉnh màu mình thích.">
   </head>
-
+  
   <body id="bg" class="container" style="font-family: Quicksand;">
 
     <div id="header" class="text-center">
       <h1 id="title">RGB Generator</h1>
       <p id="graylabel1" class="gray" style="padding-bottom: 10px;">RGB Generator là trang hỗ trợ chỉnh sửa văn bản thành màu, bạn có thể tùy chỉnh màu mình thích.</p>
     </div>
-
+    <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex flex-column align-items-center">   
+    <div class="social-links text-center"> 
+        <a href="https://rgb.fishdog.ml" class="rgb"><i class="bi bi-chat-text"></i></a>
+        <a href="https://fishdog.ml" class="status-mc"><i class="bi bi-tv-fill"></i></a>
+        <a href="https://status-mc.fishdog.ml" class="status-mc"><i class="bi bi-server"></i></a>
+    </div>
+    </header>
     <div id="input" class="col-md-2" style="padding-left: 0;">
       <label id="label1" for="color1">First Hex Color</label> 
       <input style="border-radius: 10px; position: inherit;" class="form-control col-md-4" id="color1" name="color1" value="915FFB" data-jscolor="{preset:'small dark', position:'right'}" oninput="updateSpitter(event)" onchange="updateSpitter(event)">
